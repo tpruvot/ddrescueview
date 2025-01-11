@@ -1,0 +1,10 @@
+source/*.o
+source/*.ppu
+source/*.compiled
+source/backup/
+source/ddrescueview
+source/ddrescueview.lps
+source/ddrescueview.res
+source/ddrescueview.or
+source/link*
+source/ppas.sh

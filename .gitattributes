@@ -1,0 +1,6 @@
+* text=auto
+
+*.lfm eol=crlf
+*.lfi eol=crlf
+*.pas eol=crlf
+
