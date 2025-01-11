@@ -1,15 +1,16 @@
 object MainForm: TMainForm
-  Left = 985
-  Height = 439
-  Top = 396
-  Width = 615
+  Left = 100
+  Height = 874
+  Top = 100
+  Width = 1300
   AllowDropFiles = True
   Caption = 'ddrescueview'
-  ClientHeight = 415
-  ClientWidth = 615
+  ClientHeight = 874
+  ClientWidth = 1300
   Color = clForm
-  Constraints.MinHeight = 200
-  Constraints.MinWidth = 600
+  Constraints.MinHeight = 400
+  Constraints.MinWidth = 1200
+  DesignTimePPI = 192
   Menu = MainMenu1
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -18,45 +19,47 @@ object MainForm: TMainForm
   OnShow = FormShow
   Position = poScreenCenter
   ShowHint = True
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '3.6.0.0'
   object TopPanel: TPanel
     Left = 0
-    Height = 113
+    Height = 239
     Top = 0
-    Width = 615
+    Width = 1300
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 113
-    ClientWidth = 615
+    ClientHeight = 239
+    ClientWidth = 1300
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object RescueStatusBox: TGroupBox
-      Left = 4
-      Height = 109
-      Top = 2
-      Width = 548
+      Left = 8
+      Height = 231
+      Top = 4
+      Width = 1160
       Align = alLeft
+      Anchors = [akTop, akLeft, akRight, akBottom]
       AutoSize = True
-      BorderSpacing.Left = 4
-      BorderSpacing.Top = 2
-      BorderSpacing.Right = 4
-      BorderSpacing.Bottom = 2
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 4
       Caption = 'Rescue status'
-      ClientHeight = 92
-      ClientWidth = 546
+      ClientHeight = 194
+      ClientWidth = 1158
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       object RSCol1Panel: TPanel
-        Left = 6
-        Height = 90
+        Left = 12
+        Height = 190
         Top = 0
-        Width = 161
+        Width = 352
         Align = alLeft
-        AutoSize = True
-        BorderSpacing.Left = 6
-        BorderSpacing.Right = 6
-        BorderSpacing.Bottom = 2
+        BorderSpacing.Left = 12
+        BorderSpacing.Right = 12
+        BorderSpacing.Bottom = 4
         BevelOuter = bvNone
         ChildSizing.LeftRightSpacing = 2
         ChildSizing.TopBottomSpacing = 2
@@ -64,15 +67,16 @@ object MainForm: TMainForm
         ChildSizing.VerticalSpacing = 2
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 2
-        ClientHeight = 90
-        ClientWidth = 161
+        ClientHeight = 190
+        ClientWidth = 352
+        ParentBackground = False
         TabOrder = 0
         object lblInputSize: TLabel
           Left = 2
-          Height = 16
+          Height = 36
           Hint = 'Size of the rescue device'
-          Top = 4
-          Width = 75
+          Top = 6
+          Width = 167
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Input size:'
           ParentColor = False
@@ -80,14 +84,14 @@ object MainForm: TMainForm
         end
         object EditInputSize: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 79
-          Height = 20
+          Left = 173
+          Height = 45
           Top = 2
-          Width = 80
-          BorderSpacing.Left = 2
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -96,10 +100,10 @@ object MainForm: TMainForm
         end
         object lblDomainSize: TLabel
           Left = 2
-          Height = 16
+          Height = 36
           Hint = 'Size of the rescue domain'
-          Top = 26
-          Width = 75
+          Top = 53
+          Width = 167
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Domain size:'
           ParentColor = False
@@ -108,14 +112,14 @@ object MainForm: TMainForm
         end
         object EditDomainSize: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 79
-          Height = 20
-          Top = 24
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 173
+          Height = 45
+          Top = 49
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -125,24 +129,24 @@ object MainForm: TMainForm
         end
         object lblErrorCount: TLabel
           Left = 2
-          Height = 16
+          Height = 36
           Hint = 'Number of distinct bad sector areas'
-          Top = 48
-          Width = 75
+          Top = 100
+          Width = 167
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Error count:'
           ParentColor = False
         end
         object EditErrorCount: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 79
-          Height = 20
-          Top = 46
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 173
+          Height = 45
+          Top = 96
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -151,10 +155,10 @@ object MainForm: TMainForm
         end
         object lblPending: TLabel
           Left = 2
-          Height = 16
+          Height = 36
           Hint = 'Total size of pending areas (non-tried + non-trimmed + non-scraped)'
-          Top = 70
-          Width = 75
+          Top = 147
+          Width = 167
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Pending:'
           ParentColor = False
@@ -162,14 +166,14 @@ object MainForm: TMainForm
         end
         object EditPending: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 79
-          Height = 20
-          Top = 68
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 173
+          Height = 45
+          Top = 143
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -178,15 +182,14 @@ object MainForm: TMainForm
         end
       end
       object RSCol2Panel: TPanel
-        Left = 173
-        Height = 90
+        Left = 376
+        Height = 190
         Top = 0
-        Width = 183
+        Width = 380
         Align = alLeft
-        AutoSize = True
-        BorderSpacing.Left = 6
-        BorderSpacing.Right = 6
-        BorderSpacing.Bottom = 2
+        BorderSpacing.Left = 12
+        BorderSpacing.Right = 12
+        BorderSpacing.Bottom = 4
         BevelOuter = bvNone
         ChildSizing.LeftRightSpacing = 2
         ChildSizing.TopBottomSpacing = 2
@@ -194,26 +197,27 @@ object MainForm: TMainForm
         ChildSizing.VerticalSpacing = 2
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 3
-        ClientHeight = 90
-        ClientWidth = 183
+        ClientHeight = 190
+        ClientWidth = 380
+        ParentBackground = False
         TabOrder = 1
         object ShapeFinished: TShape
           Left = 2
-          Height = 10
-          Top = 7
-          Width = 10
+          Height = 20
+          Top = 14
+          Width = 20
           BorderSpacing.CellAlignHorizontal = ccaCenter
           BorderSpacing.CellAlignVertical = ccaCenter
           Brush.Color = clLime
-          Constraints.MaxHeight = 10
-          Constraints.MaxWidth = 10
+          Constraints.MaxHeight = 20
+          Constraints.MaxWidth = 20
         end
         object lblRescued: TLabel
-          Left = 14
-          Height = 16
+          Left = 24
+          Height = 36
           Hint = 'Rescued data block'
-          Top = 4
-          Width = 85
+          Top = 6
+          Width = 185
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Rescued:'
           ParentColor = False
@@ -221,14 +225,14 @@ object MainForm: TMainForm
         end
         object EditRescued: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 101
-          Height = 20
+          Left = 213
+          Height = 45
           Top = 2
-          Width = 80
-          BorderSpacing.Left = 2
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -237,22 +241,22 @@ object MainForm: TMainForm
         end
         object ShapeOutsideDomain: TShape
           Left = 2
-          Height = 10
-          Top = 29
-          Width = 10
+          Height = 20
+          Top = 61
+          Width = 20
           BorderSpacing.CellAlignHorizontal = ccaCenter
           BorderSpacing.CellAlignVertical = ccaCenter
           Brush.Color = 3421236
-          Constraints.MaxHeight = 10
-          Constraints.MaxWidth = 10
+          Constraints.MaxHeight = 20
+          Constraints.MaxWidth = 20
           Visible = False
         end
         object lblOutsideDomain: TLabel
-          Left = 14
-          Height = 16
+          Left = 24
+          Height = 36
           Hint = 'Block outside the rescue domain specified in the domain log file'
-          Top = 26
-          Width = 85
+          Top = 53
+          Width = 185
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Not in domain'
           ParentColor = False
@@ -261,14 +265,14 @@ object MainForm: TMainForm
         end
         object EditOutsideDomain: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 101
-          Height = 20
-          Top = 24
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 213
+          Height = 45
+          Top = 49
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -278,21 +282,21 @@ object MainForm: TMainForm
         end
         object ShapeBad: TShape
           Left = 2
-          Height = 10
-          Top = 51
-          Width = 10
+          Height = 20
+          Top = 108
+          Width = 20
           BorderSpacing.CellAlignHorizontal = ccaCenter
           BorderSpacing.CellAlignVertical = ccaCenter
           Brush.Color = clRed
-          Constraints.MaxHeight = 10
-          Constraints.MaxWidth = 10
+          Constraints.MaxHeight = 20
+          Constraints.MaxWidth = 20
         end
         object lblBadSectors: TLabel
-          Left = 14
-          Height = 16
+          Left = 24
+          Height = 36
           Hint = 'Block which failed to read on the previous attempt'
-          Top = 48
-          Width = 85
+          Top = 100
+          Width = 185
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Bad sectors:'
           ParentColor = False
@@ -300,14 +304,14 @@ object MainForm: TMainForm
         end
         object EditBadSectors: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 101
-          Height = 20
-          Top = 46
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 213
+          Height = 45
+          Top = 96
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -316,22 +320,22 @@ object MainForm: TMainForm
         end
         object ShapeActive: TShape
           Left = 2
-          Height = 10
-          Top = 73
-          Width = 10
+          Height = 20
+          Top = 155
+          Width = 20
           BorderSpacing.CellAlignHorizontal = ccaCenter
           BorderSpacing.CellAlignVertical = ccaCenter
           Brush.Color = clBtnFace
-          Constraints.MaxHeight = 10
-          Constraints.MaxWidth = 10
+          Constraints.MaxHeight = 20
+          Constraints.MaxWidth = 20
           Pen.Color = clAqua
         end
         object lblCurrentPos: TLabel
-          Left = 14
-          Height = 16
+          Left = 24
+          Height = 36
           Hint = 'Current read position on the rescue device'
-          Top = 70
-          Width = 85
+          Top = 147
+          Width = 185
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Current pos:'
           ParentColor = False
@@ -339,14 +343,14 @@ object MainForm: TMainForm
         end
         object EditCurrentPos: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 101
-          Height = 20
-          Top = 68
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 213
+          Height = 45
+          Top = 143
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -355,15 +359,14 @@ object MainForm: TMainForm
         end
       end
       object RSCol3Panel: TPanel
-        Left = 362
-        Height = 90
+        Left = 768
+        Height = 190
         Top = 0
-        Width = 178
+        Width = 378
         Align = alLeft
-        AutoSize = True
-        BorderSpacing.Left = 6
-        BorderSpacing.Right = 6
-        BorderSpacing.Bottom = 2
+        BorderSpacing.Left = 12
+        BorderSpacing.Right = 12
+        BorderSpacing.Bottom = 4
         BevelOuter = bvNone
         ChildSizing.LeftRightSpacing = 2
         ChildSizing.TopBottomSpacing = 2
@@ -371,26 +374,27 @@ object MainForm: TMainForm
         ChildSizing.VerticalSpacing = 2
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 3
-        ClientHeight = 90
-        ClientWidth = 178
+        ClientHeight = 190
+        ClientWidth = 378
+        ParentBackground = False
         TabOrder = 2
         object ShapeNonTried: TShape
           Left = 2
-          Height = 10
-          Top = 7
-          Width = 10
+          Height = 20
+          Top = 14
+          Width = 20
           BorderSpacing.CellAlignHorizontal = ccaCenter
           BorderSpacing.CellAlignVertical = ccaCenter
           Brush.Color = clGray
-          Constraints.MaxHeight = 10
-          Constraints.MaxWidth = 10
+          Constraints.MaxHeight = 20
+          Constraints.MaxWidth = 20
         end
         object lblNonTried: TLabel
-          Left = 14
-          Height = 16
+          Left = 24
+          Height = 36
           Hint = 'Block that has not yet been attempted to read'
-          Top = 4
-          Width = 80
+          Top = 6
+          Width = 181
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Non-tried'
           ParentColor = False
@@ -398,14 +402,14 @@ object MainForm: TMainForm
         end
         object EditNontried: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 96
-          Height = 20
+          Left = 209
+          Height = 45
           Top = 2
-          Width = 80
-          BorderSpacing.Left = 2
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -414,21 +418,21 @@ object MainForm: TMainForm
         end
         object ShapeNonTrimmed: TShape
           Left = 2
-          Height = 10
-          Top = 29
-          Width = 10
+          Height = 20
+          Top = 61
+          Width = 20
           BorderSpacing.CellAlignHorizontal = ccaCenter
           BorderSpacing.CellAlignVertical = ccaCenter
           Brush.Color = clYellow
-          Constraints.MaxHeight = 10
-          Constraints.MaxWidth = 10
+          Constraints.MaxHeight = 20
+          Constraints.MaxWidth = 20
         end
         object lblNonTrimmed: TLabel
-          Left = 14
-          Height = 16
+          Left = 24
+          Height = 36
           Hint = 'Block that was skipped by ddrescue on a read error (or slow read), to maximize performance. May contain readable data.'
-          Top = 26
-          Width = 80
+          Top = 53
+          Width = 181
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Non-trimmed'
           ParentColor = False
@@ -436,14 +440,14 @@ object MainForm: TMainForm
         end
         object EditNontrimmed: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 96
-          Height = 20
-          Top = 24
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 209
+          Height = 45
+          Top = 49
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -452,21 +456,21 @@ object MainForm: TMainForm
         end
         object ShapeNonScraped: TShape
           Left = 2
-          Height = 10
-          Top = 51
-          Width = 10
+          Height = 20
+          Top = 108
+          Width = 20
           BorderSpacing.CellAlignHorizontal = ccaCenter
           BorderSpacing.CellAlignVertical = ccaCenter
           Brush.Color = clBlue
-          Constraints.MaxHeight = 10
-          Constraints.MaxWidth = 10
+          Constraints.MaxHeight = 20
+          Constraints.MaxWidth = 20
         end
         object lblNonScraped: TLabel
-          Left = 14
-          Height = 16
+          Left = 24
+          Height = 36
           Hint = 'Trimmed block that has yet to be scraped (pre-1.19 ddrescue: Trimmed block that has yet to be split). May contain readable data.'
-          Top = 48
-          Width = 80
+          Top = 100
+          Width = 181
           BorderSpacing.CellAlignVertical = ccaCenter
           Caption = 'Non-scraped'
           ParentColor = False
@@ -474,14 +478,14 @@ object MainForm: TMainForm
         end
         object EditNonscraped: TEdit
           AnchorSideLeft.Side = asrBottom
-          Left = 96
-          Height = 20
-          Top = 46
-          Width = 80
-          BorderSpacing.Left = 2
+          Left = 209
+          Height = 45
+          Top = 96
+          Width = 160
+          BorderSpacing.Left = 4
           BorderStyle = bsNone
           Color = clForm
-          Constraints.MaxWidth = 80
+          Constraints.MaxWidth = 160
           ParentShowHint = False
           ReadOnly = True
           TabStop = False
@@ -491,76 +495,85 @@ object MainForm: TMainForm
       end
     end
     object TopPiePanel: TPanel
-      Left = 549
-      Height = 109
-      Top = 2
-      Width = 64
+      Left = 1216
+      Height = 231
+      Top = 4
+      Width = 80
       Align = alRight
       AutoSize = True
-      BorderSpacing.Around = 2
+      BorderSpacing.Around = 4
       BevelOuter = bvNone
       ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 1
-      ClientHeight = 109
-      ClientWidth = 64
+      ClientHeight = 231
+      ClientWidth = 80
+      Constraints.MinWidth = 80
+      ParentBackground = False
       TabOrder = 1
       object PieImage: TImage
         Left = 0
         Height = 64
-        Top = 23
+        Top = 16
         Width = 64
+        Anchors = [akTop, akRight]
         BorderSpacing.CellAlignVertical = ccaCenter
+        Center = True
         Constraints.MaxHeight = 64
         Constraints.MaxWidth = 64
         Constraints.MinHeight = 64
         Constraints.MinWidth = 64
+        ImageWidth = 128
+        StretchOutEnabled = False
+        Transparent = True
       end
     end
   end
   object MainPanel: TPanel
     Left = 0
-    Height = 284
-    Top = 113
-    Width = 615
+    Height = 597
+    Top = 239
+    Width = 1300
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 284
-    ClientWidth = 615
+    ClientHeight = 597
+    ClientWidth = 1300
+    ParentBackground = False
     TabOrder = 1
     object ZoomPanel: TPanel
       Left = 0
-      Height = 229
+      Height = 487
       Top = 0
-      Width = 50
+      Width = 100
       Align = alLeft
       BevelOuter = bvNone
       BorderStyle = bsSingle
-      ClientHeight = 227
-      ClientWidth = 48
+      ClientHeight = 485
+      ClientWidth = 98
       Color = clGray
-      Constraints.MinHeight = 30
-      Constraints.MinWidth = 30
+      Constraints.MinHeight = 60
+      Constraints.MinWidth = 60
+      ParentBackground = False
       ParentColor = False
       TabOrder = 0
       object ZoomImage: TImage
         Left = 0
-        Height = 227
+        Height = 485
         Top = 0
-        Width = 48
+        Width = 98
         Align = alClient
-        Constraints.MinHeight = 25
-        Constraints.MinWidth = 25
+        Constraints.MinHeight = 50
+        Constraints.MinWidth = 50
         OnMouseDown = ZoomImageMouseDown
         OnMouseMove = ZoomImageMouseMove
         OnMouseUp = ZoomImageMouseUp
       end
       object BtnCloseZoomBar: TSpeedButton
-        Left = 32
-        Height = 13
+        Left = 66
+        Height = 26
         Hint = 'Close zoom bar'
-        Top = 2
-        Width = 13
+        Top = 4
+        Width = 26
         Anchors = [akTop, akRight]
         Glyph.Data = {
           C2010000424DC20100000000000036000000280000000B0000000B0000000100
@@ -583,29 +596,30 @@ object MainForm: TMainForm
       end
     end
     object GridPanel: TPanel
-      Left = 50
-      Height = 229
+      Left = 100
+      Height = 487
       Top = 0
-      Width = 565
+      Width = 1200
       Align = alClient
       BevelOuter = bvNone
       BorderStyle = bsSingle
-      ClientHeight = 227
-      ClientWidth = 563
+      ClientHeight = 485
+      ClientWidth = 1198
       Color = clGray
-      Constraints.MinHeight = 30
-      Constraints.MinWidth = 30
+      Constraints.MinHeight = 60
+      Constraints.MinWidth = 60
+      ParentBackground = False
       ParentColor = False
       TabOrder = 1
       OnResize = GridPanelResize
       object BlockImage: TImage
         Left = 0
-        Height = 227
+        Height = 485
         Top = 0
-        Width = 563
+        Width = 1198
         Align = alClient
-        Constraints.MinHeight = 25
-        Constraints.MinWidth = 25
+        Constraints.MinHeight = 50
+        Constraints.MinWidth = 50
         OnMouseDown = BlockImageMouseDown
         OnMouseMove = BlockImageMouseMove
         OnMouseUp = BlockImageMouseUp
@@ -614,36 +628,37 @@ object MainForm: TMainForm
     end
     object BottomPanel: TPanel
       Left = 0
-      Height = 50
-      Top = 234
-      Width = 615
+      Height = 100
+      Top = 497
+      Width = 1300
       Align = alBottom
       BevelOuter = bvNone
-      ClientHeight = 50
-      ClientWidth = 615
+      ClientHeight = 100
+      ClientWidth = 1300
       Color = clForm
+      ParentBackground = False
       ParentColor = False
       TabOrder = 2
       Visible = False
       object DbgLog: TMemo
-        Left = 433
-        Height = 50
+        Left = 936
+        Height = 100
         Hint = 'Debug log'
         Top = 0
-        Width = 182
+        Width = 364
         Align = alRight
         Color = cl3DLight
-        OnDblClick = DbgLogDblClick
         ReadOnly = True
         ScrollBars = ssAutoVertical
         TabOrder = 0
+        OnDblClick = DbgLogDblClick
       end
       object CommentsMemo: TMemo
         Left = 0
-        Height = 50
+        Height = 100
         Hint = 'Comment lines from the ddrescue mapfile'
         Top = 0
-        Width = 428
+        Width = 926
         Align = alClient
         Color = cl3DLight
         ReadOnly = True
@@ -651,11 +666,13 @@ object MainForm: TMainForm
         TabOrder = 1
       end
       object BottomHSplitter: TSplitter
-        Left = 428
-        Height = 50
+        Left = 926
+        Height = 100
         Top = 0
-        Width = 5
+        Width = 10
         Align = alRight
+        AutoSnap = False
+        Beveled = True
         Color = clForm
         ParentColor = False
         ResizeAnchor = akRight
@@ -664,9 +681,9 @@ object MainForm: TMainForm
     object MainVSplitter: TSplitter
       Cursor = crVSplit
       Left = 0
-      Height = 5
-      Top = 229
-      Width = 615
+      Height = 10
+      Top = 487
+      Width = 1300
       Align = alBottom
       AutoSnap = False
       Color = clForm
@@ -678,21 +695,21 @@ object MainForm: TMainForm
   end
   object StatusBar: TStatusBar
     Left = 0
-    Height = 18
-    Top = 397
-    Width = 615
+    Height = 38
+    Top = 836
+    Width = 1300
     Panels = <    
       item
         Text = 'No file opened'
-        Width = 100
+        Width = 200
       end>
     ParentShowHint = False
     SimplePanel = False
     ShowHint = True
   end
   object MainMenu1: TMainMenu
-    Left = 80
-    Top = 128
+    Left = 160
+    Top = 256
     object FileMenu: TMenuItem
       Caption = 'File'
       object miOpenMapfile: TMenuItem
@@ -936,32 +953,32 @@ object MainForm: TMainForm
   object OpenDialog1: TOpenDialog
     Filter = 'All files|*.*'
     Options = [ofReadOnly, ofHideReadOnly, ofPathMustExist, ofFileMustExist, ofEnableSizing]
-    Left = 160
-    Top = 128
+    Left = 320
+    Top = 256
   end
   object updateTimer: TTimer
     Enabled = False
     OnTimer = miRefreshClick
-    Left = 240
-    Top = 128
+    Left = 480
+    Top = 256
   end
   object ApplicationEvents1: TApplicationProperties
     OnShowHint = ApplicationEvents1ShowHint
-    Left = 336
-    Top = 128
+    Left = 672
+    Top = 256
   end
   object SaveDialog1: TSaveDialog
     DefaultExt = '.png'
     Filter = 'Portable network graphics|*.png'
     Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
-    Left = 432
-    Top = 128
+    Left = 864
+    Top = 256
   end
   object RetryTimer: TTimer
     Enabled = False
     Interval = 100
     OnTimer = miRefreshClick
-    Left = 240
-    Top = 192
+    Left = 480
+    Top = 384
   end
 end
